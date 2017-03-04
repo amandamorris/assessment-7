@@ -19,6 +19,7 @@ Social networks are good to model with graphs - there may be cycles, and two
 social circles may not overlap at all.
 
 Runtime
+# FINISH THIS
 
 Data Structure              Index   Search  Add-R   Add-L   Pop-L   Pop-R
 Python List (Array)         O(1)    O(n)    O(1)    O(n)    O(n)    O(1)        
@@ -28,3 +29,32 @@ Queue (as Array)            X   X   X       X
 Queue (as LL or DLL)        X   X   X       X
 Stack (Array, LL, or DLL)   X   X   X       X    
 Deque (as DLL)              X   X                
+
+
+#FINISH THIS
+Data Structure          Get     Add     Delete  Iterate     Memory
+Dictionary (Hash Map)   O(1)    O(1)    O(1)    O(n)        medium
+Set (Hash Map)          O(1)    O(1)    O(1)    O(n)                           
+Binary Search Tree                   
+Tree                     
+
+Sorting
+
+1. Describe in words how the Bubble Sort algorithm works.
+Bubble sort algorithm works by comparing adjacent elements in the list, starting
+with the leftmost elements.  Whichever element is bigger of the pair gets moved
+to the right side of the pair if it wasn't already there, and then the next set
+of 2 elements is compared.  At the end of the first iteration, the largest
+element is in the rightmost position.  Then the algorithm starts again with the
+two leftmost elements.  It's called bubble sort because the large elements
+bubble to the top.
+2. Describe in words how the Merge Sort algorithm works.
+Merge sort relies on the idea that it's relatively easy to sort two lists that
+are already sorted.  It divides a list in half recursively, until each list
+contains only one element.  Then the lists are put back together in sorted
+order, and the final step is merging together the two halves of the original
+list, but each half is sorted.
+3. Describe in words how the Quick Sort algorithm works.
+In quicksort, you choose a pivot number, and put all numbers smaller than the
+pivot to the left, and all numbers larger to the right.  Then a new pivot is
+chosen, and the process is repeated.
