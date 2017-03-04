@@ -97,8 +97,15 @@ def num_nodes(tree):
         >>> num_nodes(one)
         6
     """
+    if not tree:
+        return 0
+    if tree.children == []:
+        return 1
+    sum_children = 0
+    for child in tree.children:
+        sum_children += num_nodes(child)
+    return 1 + sum_children
 
-    pass
 
 #####################################################################
 # END OF ASSIGNMENT: You can ignore everything below.
