@@ -12,7 +12,12 @@ def print_item(my_list, i=0):
         3
 
     """
-    pass
+    # print the ith item, increment i, call function again?
+    if i >= len(my_list):
+        return
+    print my_list[i]
+    print_item(my_list, i + 1)
+
 
 
 # 2. Write a function that uses recursion to print each node in a tree.
