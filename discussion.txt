@@ -1,0 +1,30 @@
+Recursion
+1. In your own words, what is recursion?
+Recursion is a computer science technique where a function calls itself.
+It's often used instead of loops.
+2. Why is it necessary to have a base case?
+A base case is necessary so that the recursive calls end at some point.  If
+there was no base case, the function would continue calling itself (until the
+computer errors out).
+
+Graphs
+1. What is a graph?
+A graph is a set of nodes and edges, and where the nodes show connections
+between the edges.  Graphs can be directed or not directed.
+2. How is a graph different from a tree?
+All trees are graphs, but not all graphs are trees.  Graphs can have cycles in
+them, but trees cannot.
+3. Give an example of something that would be good to model with a graph.
+Social networks are good to model with graphs - there may be cycles, and two
+social circles may not overlap at all.
+
+Runtime
+
+Data Structure              Index   Search  Add-R   Add-L   Pop-L   Pop-R
+Python List (Array)         O(1)    O(n)    O(1)    O(n)    O(n)    O(1)        
+Linked List                 O(n)    O(n)    O(n)    O(1)    O(1)    O(n)     
+Doubly-Linked List          O(n)    O(n)    O(1)    O(1)    O(1)    O(1)             
+Queue (as Array)            X   X   X       X       
+Queue (as LL or DLL)        X   X   X       X
+Stack (Array, LL, or DLL)   X   X   X       X    
+Deque (as DLL)              X   X                
