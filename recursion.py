@@ -55,7 +55,10 @@ def list_length(my_list):
         4
 
     """
-    pass
+    if my_list == []:
+        return 0
+
+    return list_length(my_list[1:]) + 1
 
 
 # 4. Write a function that uses recursion to count how many nodes are in a tree.
