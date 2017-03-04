@@ -7,7 +7,19 @@ def bubble_sort(lst):
         >>> bubble_sort([3, 5, 7, 2, 4, 1])
         [1, 2, 3, 4, 5, 7]
     """
-    pass
+    # iterate through the list
+    #     if an element is greater than the next element, swap them
+    # do this until you get through the list without swapping?
+    for num in range(len(lst) - 1):
+        for index in range(len(lst) - 1 - num):
+            swapped = False
+            if lst[index] > lst[index + 1]:
+                lst[index], lst[index + 1] = lst[index + 1], lst[index]
+                swapped = True
+        if not swapped:
+            break
+    return lst
+
 
 
 def merge_lists(list1, list2):
@@ -19,11 +31,15 @@ def merge_lists(list1, list2):
     """
 
     merged = []
-    while len(list1) > 0 or len(list2) > 0:
+    # as long as at least one of the lists isn't empty:
+    while list1 or list2:
+        # if list1 is empty, pop from list2
         if not list1:
             merged.append(list2.pop(0))
+        # if list2 is empty, pop from list1
         elif not list2:
             merged.append(list1.pop(0))
+        # otherwise compare the first element of the lists, and pop the smaller
         elif list1[0] < list2[0]:
             merged.append(list1.pop(0))
         else:
@@ -45,7 +61,17 @@ def merge_sort(lst):
     >>> merge_sort([6, 2, 3, 9, 0, 1])
     [0, 1, 2, 3, 6, 9]
     """
-    pass
+    # base case - single element list is already sorted
+    if len(lst) == 1:
+        return lst
+
+    midpoint = len(lst)/2
+
+    # split list into 2 halves, call merge sort on each half
+    left_lst = merge_sort(lst[:midpoint])
+    right_lst = merge_sort(lst[midpoint:])
+
+    return merge_lists(left_lst, right_lst)
 
 
 
