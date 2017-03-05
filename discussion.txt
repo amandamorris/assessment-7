@@ -4,8 +4,8 @@ Recursion is a computer science technique where a function calls itself.
 It's often used instead of loops.
 2. Why is it necessary to have a base case?
 A base case is necessary so that the recursive calls end at some point.  If
-there was no base case, the function would continue calling itself (until the
-computer errors out).
+there was no base case, the function would continue calling itself (until python
+gives a stack overflow error).
 
 Graphs
 1. What is a graph?
@@ -23,20 +23,20 @@ Runtime
 
 Data Structure              Index   Search  Add-R   Add-L   Pop-L   Pop-R
 Python List (Array)         O(1)    O(n)    O(1)    O(n)    O(n)    O(1)        
-Linked List                 O(n)    O(n)    O(n)    O(1)    O(1)    O(n)     
+Linked List                 O(n)    O(n)    O(1)    O(1)    O(1)    O(n)     
 Doubly-Linked List          O(n)    O(n)    O(1)    O(1)    O(1)    O(1)             
-Queue (as Array)            X   X   X       X       
-Queue (as LL or DLL)        X   X   X       X
-Stack (Array, LL, or DLL)   X   X   X       X    
-Deque (as DLL)              X   X                
+Queue (as Array)            X       X       O(1)    X       O(n)    X       
+Queue (as LL or DLL)        X       X       O(1)    X       O(1)    X
+Stack (Array, LL, or DLL)   X       X       O(1)    X       X       O(1)    
+Deque (as DLL)              X       X       O(1)    O(1)    O(1)    O(1)
 
 
 #FINISH THIS
 Data Structure          Get     Add     Delete  Iterate     Memory
-Dictionary (Hash Map)   O(1)    O(1)    O(1)    O(n)        medium
-Set (Hash Map)          O(1)    O(1)    O(1)    O(n)                           
-Binary Search Tree                   
-Tree                     
+Dictionary (Hash Map)   O(1)    O(1)    O(1)    O(nlogn)    medium
+Set (Hash Map)          O(1)    O(1)    O(1)    O(nlogn)    medium                   
+Binary Search Tree      O(logn) O(logn) O(logn) O(n)        little            
+Tree                    O(n)    O(1)    O(1)    O(n)        little
 
 Sorting
 
